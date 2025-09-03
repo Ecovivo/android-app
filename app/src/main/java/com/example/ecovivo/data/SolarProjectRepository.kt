@@ -9,7 +9,7 @@ class SolarProjectRepository @Inject constructor(private val solarProjectDao: So
 
     val solarProject: Flow<List<SolarProjectEntity>> = solarProjectDao.getSolarProjects()
 
-    suspend fun add(solarProjectDao: SolarProjectDao) {
-        solarProjectDao.addSolarProject(SolarProjectEntity())
+    suspend fun add(name: String, kind: Int) {
+        solarProjectDao.addSolarProject(SolarProjectEntity(name = name, kind = kind))
     }
 }

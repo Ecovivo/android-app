@@ -134,6 +134,7 @@ fun IntroScreen(introViewModel: IntroViewModel, navigationController: NavHostCon
                     }
                 }
                 Button(colors = btnColorPrimary,
+                    enabled = false,
                     shape = btnBorderRadius,
                     modifier = elementStyle,
                     onClick = { navigationController.navigate(Routes.List.route) }) {
